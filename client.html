@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nameData">
+        <p>がんばっペ！Wake Up, Girls！</p>
+    </div>
+    <script>
+        $.ajax({
+            url: 'sample.json',
+            dataType: 'json',
+            data: {
+                name: 'chara'
+            },
+            success: function (data) {
+                var dataArray = data.charas;
+
+                $.each(dataArray, function (i) {
+                    $(".nameData").append(
+                        "<p>id: " + dataArray[i].id +
+                        " Character: " + dataArray[i].chara +
+                        "(CV: " + dataArray[i].cv + ")</p>"
+                    );
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

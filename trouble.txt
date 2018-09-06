@@ -1,0 +1,1 @@
+jquery-3.3.1.min.js:2 Failed to load file:///C:/Users/masao/Documents/json_test/json/data.json?name=chara: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.
